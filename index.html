@@ -45,15 +45,30 @@
     <h2>Our Memories</h2>
     <div class="grid">
         
-        <div class="card" onclick="playAudio('audio(1).mp3')">
-            <img src="photo(1).jpg" alt="Memory 1">
+        <div class="card" onclick="playAudio('audio (1).mp3')">
+            <img src="photo (1).jpg" alt="Memory 1">
             <p>Caption 1</p>
         </div>
         
-        <div class="card" onclick="playAudio('audio(2).mp3')">
-            <img src="photo(2).jpg" alt="Memory 2">
+        <div class="card" onclick="playAudio('audio (2).mp3')">
+            <img src="photo (2).jpg" alt="Memory 2">
             <p>Caption 2</p>
         </div>
         
-        <div class="card" onclick="playAudio('audio(3).mp3')">
-            <img src
+        <div class="card" onclick="playAudio('audio (3).mp3')">
+            <img src="photo (3).jpg" alt="Memory 3">
+            <p>Caption 3</p>
+        </div>
+
+    </div>
+
+    <script>
+        let currentAudio = null;
+        function playAudio(file) {
+            if (currentAudio) { currentAudio.pause(); }
+            currentAudio = new Audio(file);
+            currentAudio.play();
+        }
+    </script>
+</body>
+</html>
